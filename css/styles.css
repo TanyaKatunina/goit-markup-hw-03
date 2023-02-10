@@ -8,11 +8,6 @@
 html{
     box-sizing: border-box;
 }
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
-}
 :root{
     --primary-text-color: #434455;
     --title-text-color: #2E2F42;
@@ -31,8 +26,11 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 1158px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.header{
+    border-bottom: 1px solid var(--footer-text-color);
 }
 .logo{
     font-family: Raleway, sans-serif;
@@ -101,9 +99,11 @@ body{
     text-align: center;
     text-transform: capitalize;
 }
+.address{
+    margin-left: auto;
+}
 .auth-nav{
     display: flex;
-    margin-left: auto;
 }
 .auth-nav .item + .item{
     margin-left: 40px;
@@ -177,7 +177,7 @@ body{
     display: flex;
 }
 .advantage-list .item{
-    width: 264px;
+    width: calc((100% - 72px)/4);
 }
 .advantage-list .item:not(:last-child){
     margin-right: 24px;
@@ -215,8 +215,17 @@ body{
 .team-list{
     display: flex;
 }
+.team-list .item{
+    background: var(--primary-background-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
 .team-list .item:not(:last-child){
     margin-right: 24px;
+}
+.team-name{
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .team-list-title{
     color: var(--title-text-color);
@@ -225,10 +234,10 @@ body{
 .team-list-text{
     text-align: center;
 }
-.team-list .teamcard,
+/* .team-list .teamcard,
 .portfolio .project{
     margin-bottom: 32px;
-}
+} */
 /* Footer */
 .footer{
     padding-top: 100px;
@@ -248,6 +257,9 @@ body{
 }
 
 /* Стили для portfolio.html */
+.portfolio-section{
+    padding-top: 96px;
+}
 .portfolio{
     display: flex;
     flex-wrap: wrap;
@@ -257,6 +269,14 @@ body{
     margin-right: 24px;
     margin-bottom: 48px;
     border: 1px solid var(--footer-text-color);
+}
+.project-name{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+
+    border: 1px solid var(--footer-text-color);
+    border-top-style: none;
 }
 .portfolio .item:nth-child(3n){
     margin-right: 0;
@@ -270,8 +290,7 @@ body{
 .button-list{
     display: flex;
     justify-content: center;
-    padding-top: 96px;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 .button-list .item:not(:last-child){
     margin-right: 24px;
